@@ -16,8 +16,8 @@ public class EmailConfig {
 
 		mailSender.setHost("smtp.gmail.com");
 		mailSender.setPort(587);
-		mailSender.setUsername("meziani-i@outlook.fr");
-		mailSender.setPassword("cujjbvureksqlqol");
+		mailSender.setUsername("email");
+		mailSender.setPassword("passWorLd");
 
 		Properties javaMailProperties = new Properties();
 		javaMailProperties.put("mail.smtp.auth", true);

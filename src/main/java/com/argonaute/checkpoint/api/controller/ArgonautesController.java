@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.argonaute.checkpoint.api.model.Argonaute;
+import com.argonaute.checkpoint.api.model.Argonautes;
 import com.argonaute.checkpoint.api.repository.ArgonautesRepository;
 
 @RestController
@@ -20,12 +20,12 @@ public class ArgonautesController {
 	ArgonautesRepository argonautesRepository;
 
 	@GetMapping
-	public List<Argonaute> findAll() {
+	public List<Argonautes> findAll() {
 		return argonautesRepository.findAll();
 	}
 
 	@GetMapping("{id}")
-	public Optional<Argonaute> findOne(@PathVariable(required = true) Long id) {
+	public Optional<Argonautes> findOne(@PathVariable(required = true) Long id) {
 		return argonautesRepository.findById(id);
 	}
 }

@@ -4,10 +4,10 @@ import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.argonaute.checkpoint.api.model.Argonaute;
+import com.argonaute.checkpoint.api.model.Argonautes;
 
-public interface ArgonautesRepository extends JpaRepository<Argonaute, Long> {
-	Optional<Argonaute> findByname(String name);
+public interface ArgonautesRepository extends JpaRepository<Argonautes, Long> {
+	Optional<Argonautes> findBySurname(String surname);
 
-	Boolean existsByName(String name);
+	Boolean existsBySurname(String surname);
 }

@@ -25,9 +25,26 @@ public class EmailSenderService {
 		helper = new MimeMessageHelper(message, true);
 		helper.setFrom(emailDto.getEmail());
 		helper.setTo(argoMail);
-		helper.setText(emailDto.getMessage() + "<br><p>From: " + emailDto.getName() + "</p>Repondre a: "
+		helper.setText(emailDto.getMessage() + "<br><p>From: " + emailDto.getName() + "</p>Answer to: "
 				+ emailDto.getEmail() + "</p>", true);
 		javaMailSender.send(message);
 		return "success";
 	}
+
+	public String sendReservationMail(EmailDto emailDto) throws MessagingException {
+		MimeMessage message = javaMailSender.createMimeMessage();
+		message.setSubject("Réservation par " + emailDto.getName());
+		MimeMessageHelper helper;
+		helper = new MimeMessageHelper(message, true);
+		helper.setFrom(emailDto.getEmail());
+		helper.setTo(argoMail);
+
+		StringBuilder stringBuilder = new StringBuilder();
+		helper.setText(stringBuilder.append("Nom Prénom : ").append(emailDto.getName()).append("<br>Mail : ")
+				.append(emailDto.getEmail()).append("<br>Vous êtes : ").append(emailDto.getName())
+				.append("<br><br>Commentaires : ").append(emailDto.getMessage()).toString(), true);
+		javaMailSender.send(message);
+		return "success";
+	}
+
 }

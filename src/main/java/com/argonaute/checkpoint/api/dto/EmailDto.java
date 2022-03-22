@@ -4,13 +4,15 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
-import org.springframework.lang.Nullable;
-
 public class EmailDto {
 
 	@NotBlank
 	@Size(min = 2, max = 15)
 	private String name;
+
+	@NotBlank
+	@Size(min = 4, max = 10)
+	private String tel;
 
 	@NotBlank
 	@Size(min = 4, max = 255)
@@ -21,10 +23,6 @@ public class EmailDto {
 
 	@NotBlank
 	private String message;
-
-	@Nullable
-	@Size(max = 0)
-	private String areyouarobot;
 
 	public String getName() {
 		return name;
@@ -56,6 +54,14 @@ public class EmailDto {
 
 	public void setMessage(String message) {
 		this.message = message;
+	}
+
+	public String getTel() {
+		return tel;
+	}
+
+	public void setTel(String tel) {
+		this.tel = tel;
 	}
 
 }
