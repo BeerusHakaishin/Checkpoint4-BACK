@@ -1,1 +1,0 @@
-package com.argonaute.checkpoint.api.security;
