@@ -30,7 +30,7 @@ CREATE TABLE `argonautes` (
   `surname` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UKc9svy051ynn5hu7gu5t4prw3c` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -104,7 +104,7 @@ CREATE TABLE `user` (
   `username` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UKsb8bbouer5wak8vyiiy4pf2bx` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -113,7 +113,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'$2a$10$5lg6v1UcuPEMPZ1DiW0F1OU9319m9JQWf2I9drGjrCuZ1YZBANia2','isma'),(2,'$2a$10$5lg6v1UcuPEMPZ1DiW0F1OU9319m9JQWf2I9drGjrCuZ1YZBANia2','beerus');
+INSERT INTO `user` VALUES (1,'$2a$10$5lg6v1UcuPEMPZ1DiW0F1OU9319m9JQWf2I9drGjrCuZ1YZBANia2','isma'),(2,'$2a$10$5lg6v1UcuPEMPZ1DiW0F1OU9319m9JQWf2I9drGjrCuZ1YZBANia2','beerus'),(15,'$2a$10$5lg6v1UcuPEMPZ1DiW0F1OU9319m9JQWf2I9drGjrCuZ1YZBANia2','Valet ');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -140,7 +140,7 @@ CREATE TABLE `user_roles` (
 
 LOCK TABLES `user_roles` WRITE;
 /*!40000 ALTER TABLE `user_roles` DISABLE KEYS */;
-INSERT INTO `user_roles` VALUES (1,2),(2,2);
+INSERT INTO `user_roles` VALUES (15,1),(1,2),(2,2);
 /*!40000 ALTER TABLE `user_roles` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -153,4 +153,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-22 17:32:59
+-- Dump completed on 2022-03-22 21:02:18
