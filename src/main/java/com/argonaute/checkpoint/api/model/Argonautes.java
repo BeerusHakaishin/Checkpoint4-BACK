@@ -18,6 +18,19 @@ public class Argonautes {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	@Column(name = "surname")
+	@Size(min = 2, max = 255)
+	private String surname;
+
+	@Column(columnDefinition = "TEXT")
+	@NotBlank
+	@Size(min = 2)
+	private String description;
+
+	@Column(name = "dob")
+	@JsonFormat(pattern = "dd/MM/YYYY")
+	private Date dob;
+
 	public Long getId() {
 		return id;
 	}
@@ -50,16 +63,8 @@ public class Argonautes {
 		this.dob = dob;
 	}
 
-	@Column(name = "surname")
-	@Size(min = 2, max = 255)
-	private String surname;
+	public static void setName(String name) {
+		// TODO Auto-generated method stub
 
-	@Column(columnDefinition = "TEXT")
-	@NotBlank
-	@Size(min = 2)
-	private String description;
-
-	@Column(name = "dob")
-	@JsonFormat(pattern = "dd/MM/YYYY")
-	private Date dob;
+	}
 }

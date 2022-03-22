@@ -10,4 +10,5 @@ public interface ArgonautesRepository extends JpaRepository<Argonautes, Long> {
 	Optional<Argonautes> findBySurname(String surname);
 
 	Boolean existsBySurname(String surname);
+
 }
