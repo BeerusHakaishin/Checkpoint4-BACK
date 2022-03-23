@@ -16,7 +16,7 @@ public class EmailSenderService {
 	@Autowired
 	private JavaMailSender javaMailSender;
 
-	private String argoMail = "meziani-i@outlook.fr";
+	private String argoMail = "*";
 
 	public String sendMail(EmailDto emailDto) throws MessagingException {
 		MimeMessage message = javaMailSender.createMimeMessage();
